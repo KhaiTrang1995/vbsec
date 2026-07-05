@@ -138,21 +138,21 @@ Xem [docs/vi/usage.md](docs/vi/usage.md) để biết toàn bộ tuỳ chọn, b
 |---|---|---|---|
 | 1 | `HARDCODED-SECRET` | NGHIÊM TRỌNG | — |
 | 2 | `SQL-INJECTION` | NGHIÊM TRỌNG | go, php, typescript |
-| 3 | `XSS` | CAO | typescript |
+| 3 | `XSS` | CAO | typescript, dotnet |
 | 4 | `IDOR` | CAO | — |
 | 5 | `SLOPSQUATTING` | NGHIÊM TRỌNG | — |
 | 6 | `BRUTE-FORCE` | CAO | — |
 | 7 | `MASS-ASSIGNMENT` | NGHIÊM TRỌNG | typescript |
 | 8 | `INSECURE-DESERIALIZATION` | NGHIÊM TRỌNG | go, php, typescript |
-| 9 | `SSRF` | CAO | go, typescript |
+| 9 | `SSRF` | CAO | go, typescript, dotnet |
 | 10 | `PATH-TRAVERSAL` | CAO | — |
 | 11 | `CSRF` | CAO | php, typescript |
 | 12 | `BROKEN-ACCESS-CONTROL` | NGHIÊM TRỌNG | — |
 | 13 | `WEAK-PASSWORD-HASHING` | NGHIÊM TRỌNG | — |
-| 14 | `JWT-NONE-ALGORITHM` | NGHIÊM TRỌNG | typescript |
-| 15 | `CORS-MISCONFIG` | CAO | typescript |
+| 14 | `JWT-NONE-ALGORITHM` | NGHIÊM TRỌNG | typescript, dotnet |
+| 15 | `CORS-MISCONFIG` | CAO | typescript, dotnet |
 | 16 | `UNRESTRICTED-FILE-UPLOAD` | NGHIÊM TRỌNG | — |
-| 17 | `VERBOSE-ERROR-DEBUG-MODE` | CAO | go, php, typescript |
+| 17 | `VERBOSE-ERROR-DEBUG-MODE` | CAO | go, php, typescript, dotnet |
 | 18 | `MISSING-RATE-LIMIT` | CAO | — |
 | 19 | `RACE-CONDITION` | CAO | — |
 | 20 | `OUTDATED-DEPENDENCY` | CAO | — |
@@ -173,8 +173,10 @@ Danh sách hiện tại có 21 quy tắc và sẽ tiếp tục mở rộng.
 - v0.2 — Chuyên sâu TypeScript/JavaScript (Sequelize/Prisma/Mongoose, React/Vue/Angular, Express/NestJS/Next.js) ✅
 - v0.3 — Phạm vi mặc định chuyển sang toàn repo, lưu báo cáo cố định, giải thích chi tiết cho từng finding ✅
 - v0.4 — Chuyên sâu Python (SQLAlchemy/Django ORM SQLi, pickle/yaml deserialization RCE, Werkzeug debugger, FastAPI/Flask/Django CSRF + CORS, PyJWT algorithms, subprocess shell=True) ✅
-- v0.5 (hiện tại) — Hỗ trợ đa nền tảng: OpenAI Codex CLI + Google Antigravity (sequential LARGE mode, chia sẻ bộ rule, `install.sh` + `sync-skills.sh`) ✅
-- v0.6+ — Ruby, Java, Rust — theo nhu cầu cộng đồng
+- v0.5 — Hỗ trợ đa nền tảng: OpenAI Codex CLI + Google Antigravity (sequential LARGE mode, chia sẻ bộ rule, `install.sh` + `sync-skills.sh`) ✅
+- v0.6 — Chuyên sâu .NET / C#, bản đầu: SQL-INJECTION, MASS-ASSIGNMENT, INSECURE-DESERIALIZATION, COMMAND-INJECTION ✅
+- v0.6.1 (hiện tại) — Chuyên sâu .NET / C#, đóng gap: + VERBOSE-ERROR-DEBUG-MODE, XSS, SSRF, JWT-NONE-ALGORITHM, CORS-MISCONFIG (9/9 override, ngang TypeScript/Python) ✅
+- v0.7+ — Ruby, Java, Rust — theo nhu cầu cộng đồng
 
 ## Miễn trừ trách nhiệm
 

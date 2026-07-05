@@ -14,21 +14,21 @@ Tổng quan ngắn gọn từng rule với ví dụ unsafe/safe. Để đọc đ
 |---|---|---|---|
 | 1 | [HARDCODED-SECRET](#rule-1--hardcoded-secret) | CRITICAL | — |
 | 2 | [SQL-INJECTION](#rule-2--sql-injection) | CRITICAL | go, php, typescript, python, dotnet |
-| 3 | [XSS](#rule-3--xss) | HIGH | typescript, python |
+| 3 | [XSS](#rule-3--xss) | HIGH | typescript, python, dotnet |
 | 4 | [IDOR](#rule-4--idor) | HIGH | — |
 | 5 | [SLOPSQUATTING](#rule-5--slopsquatting) | CRITICAL | — |
 | 6 | [BRUTE-FORCE](#rule-6--brute-force) | HIGH | — |
 | 7 | [MASS-ASSIGNMENT](#rule-7--mass-assignment) | CRITICAL | typescript, python, dotnet |
 | 8 | [INSECURE-DESERIALIZATION](#rule-8--insecure-deserialization) | CRITICAL | go, php, typescript, python, dotnet |
-| 9 | [SSRF](#rule-9--ssrf) | HIGH | go, typescript, python |
+| 9 | [SSRF](#rule-9--ssrf) | HIGH | go, typescript, python, dotnet |
 | 10 | [PATH-TRAVERSAL](#rule-10--path-traversal) | HIGH | — |
 | 11 | [CSRF](#rule-11--csrf) | HIGH | php, typescript, python |
 | 12 | [BROKEN-ACCESS-CONTROL](#rule-12--broken-access-control) | CRITICAL | — |
 | 13 | [WEAK-PASSWORD-HASHING](#rule-13--weak-password-hashing) | CRITICAL | — |
-| 14 | [JWT-NONE-ALGORITHM](#rule-14--jwt-none-algorithm) | CRITICAL | typescript, python |
-| 15 | [CORS-MISCONFIG](#rule-15--cors-misconfig) | HIGH | typescript, python |
+| 14 | [JWT-NONE-ALGORITHM](#rule-14--jwt-none-algorithm) | CRITICAL | typescript, python, dotnet |
+| 15 | [CORS-MISCONFIG](#rule-15--cors-misconfig) | HIGH | typescript, python, dotnet |
 | 16 | [UNRESTRICTED-FILE-UPLOAD](#rule-16--unrestricted-file-upload) | CRITICAL | — |
-| 17 | [VERBOSE-ERROR-DEBUG-MODE](#rule-17--verbose-error-debug-mode) | HIGH | go, php, typescript, python |
+| 17 | [VERBOSE-ERROR-DEBUG-MODE](#rule-17--verbose-error-debug-mode) | HIGH | go, php, typescript, python, dotnet |
 | 18 | [MISSING-RATE-LIMIT](#rule-18--missing-rate-limit) | HIGH | — |
 | 19 | [RACE-CONDITION](#rule-19--race-condition) | HIGH | — |
 | 20 | [OUTDATED-DEPENDENCY](#rule-20--outdated-dependency) | HIGH | — |

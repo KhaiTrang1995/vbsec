@@ -138,21 +138,21 @@ See [docs/en/usage.md](docs/en/usage.md) for all options including `staged`, sin
 |---|---|---|---|
 | 1 | `HARDCODED-SECRET` | CRITICAL | — |
 | 2 | `SQL-INJECTION` | CRITICAL | go, php, typescript |
-| 3 | `XSS` | HIGH | typescript |
+| 3 | `XSS` | HIGH | typescript, dotnet |
 | 4 | `IDOR` | HIGH | — |
 | 5 | `SLOPSQUATTING` | CRITICAL | — |
 | 6 | `BRUTE-FORCE` | HIGH | — |
 | 7 | `MASS-ASSIGNMENT` | CRITICAL | typescript |
 | 8 | `INSECURE-DESERIALIZATION` | CRITICAL | go, php, typescript |
-| 9 | `SSRF` | HIGH | go, typescript |
+| 9 | `SSRF` | HIGH | go, typescript, dotnet |
 | 10 | `PATH-TRAVERSAL` | HIGH | — |
 | 11 | `CSRF` | HIGH | php, typescript |
 | 12 | `BROKEN-ACCESS-CONTROL` | CRITICAL | — |
 | 13 | `WEAK-PASSWORD-HASHING` | CRITICAL | — |
-| 14 | `JWT-NONE-ALGORITHM` | CRITICAL | typescript |
-| 15 | `CORS-MISCONFIG` | HIGH | typescript |
+| 14 | `JWT-NONE-ALGORITHM` | CRITICAL | typescript, dotnet |
+| 15 | `CORS-MISCONFIG` | HIGH | typescript, dotnet |
 | 16 | `UNRESTRICTED-FILE-UPLOAD` | CRITICAL | — |
-| 17 | `VERBOSE-ERROR-DEBUG-MODE` | HIGH | go, php, typescript |
+| 17 | `VERBOSE-ERROR-DEBUG-MODE` | HIGH | go, php, typescript, dotnet |
 | 18 | `MISSING-RATE-LIMIT` | HIGH | — |
 | 19 | `RACE-CONDITION` | HIGH | — |
 | 20 | `OUTDATED-DEPENDENCY` | HIGH | — |
@@ -173,8 +173,10 @@ The list currently contains 21 rules and will continue to expand.
 - v0.2 — TypeScript/JavaScript specialization (Sequelize/Prisma/Mongoose, React/Vue/Angular, Express/NestJS/Next.js) ✅
 - v0.3 — Default scope changed to full-repo, persistent reports, verbose per-finding explanations ✅
 - v0.4 — Python specialization (SQLAlchemy/Django ORM SQLi, pickle/yaml deserialization RCE, Werkzeug debugger, FastAPI/Flask/Django CSRF + CORS, PyJWT algorithms, subprocess shell=True) ✅
-- v0.5 (current) — Multi-platform support: OpenAI Codex CLI + Google Antigravity (sequential LARGE mode, shared rule set, `install.sh` + `sync-skills.sh`) ✅
-- v0.6+ — Ruby, Java, Rust — community-driven
+- v0.5 — Multi-platform support: OpenAI Codex CLI + Google Antigravity (sequential LARGE mode, shared rule set, `install.sh` + `sync-skills.sh`) ✅
+- v0.6 — .NET / C# specialization, initial: SQL-INJECTION, MASS-ASSIGNMENT, INSECURE-DESERIALIZATION, COMMAND-INJECTION ✅
+- v0.6.1 (current) — .NET / C# specialization, gap closed: + VERBOSE-ERROR-DEBUG-MODE, XSS, SSRF, JWT-NONE-ALGORITHM, CORS-MISCONFIG (9/9 overrides, on par with TypeScript/Python) ✅
+- v0.7+ — Ruby, Java, Rust — community-driven
 
 ## Disclaimer
 

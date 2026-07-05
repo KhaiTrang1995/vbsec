@@ -78,7 +78,7 @@ See `references/language-detection.md` for the detection heuristic. In short:
 | PHP | `php/` | 5 | Stable (v0.1) |
 | TypeScript/JavaScript | `typescript/` | 10 | Stable (v0.2) — includes both `.ts` and `.js` files |
 | Python | `python/` | 9 | Stable (v0.4) — `.py` and `.pyw` |
-| .NET / C# | `dotnet/` | 4 | Stable (v0.6) — ASP.NET Core / EF Core |
+| .NET / C# | `dotnet/` | 9 | Stable (v0.6.1) — ASP.NET Core / EF Core |
 
 **Phase v0.7+** (planned): Ruby, Rust, Java/Kotlin.
 
