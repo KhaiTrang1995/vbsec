@@ -68,13 +68,21 @@ Contributors: edit rules in `skills/vbs-scan-security/` (the canonical Claude fo
 
 ## Installation
 
-vbsec auto-detects every supported CLI you have installed and wires up the skill. Run:
+vbsec auto-detects every supported platform you have installed and wires up the skill. Run:
 
 ```bash
 git clone https://github.com/tanviet12/vbsec ~/vbsec
 cd ~/vbsec
-./scripts/install.sh
+./scripts/install.sh         # auto-detect, install for what's present
+./scripts/install.sh --all   # force install for all 3 platforms regardless
 ```
+
+Detection logic:
+- **Claude Code** — binary `claude` in PATH
+- **OpenAI Codex CLI** — binary `codex` in PATH
+- **Google Antigravity** — app at `/Applications/Antigravity.app` (macOS) OR CLI tool `agy` in PATH (installed via Antigravity IDE menu)
+
+Antigravity is an IDE (like VS Code), not a CLI. For a brand-new Antigravity user, the folder `~/.gemini/antigravity/skills/` does not exist by default — the installer creates it for you.
 
 The installer symlinks the appropriate skill folder into each platform's expected location. To update later:
 

@@ -68,13 +68,21 @@ Người contribute: sửa rule trong `skills/vbs-scan-security/` (folder canoni
 
 ## Cài đặt
 
-vbsec tự động detect mọi CLI hỗ trợ có sẵn trên máy và cấu hình skill. Chạy:
+vbsec tự động detect mọi platform hỗ trợ có sẵn trên máy và cấu hình skill. Chạy:
 
 ```bash
 git clone https://github.com/tanviet12/vbsec ~/vbsec
 cd ~/vbsec
-./scripts/install.sh
+./scripts/install.sh         # auto-detect, cài cho platform có sẵn
+./scripts/install.sh --all   # ép cài cho cả 3 platform bất kể detection
 ```
+
+Cách detect:
+- **Claude Code** — binary `claude` trong PATH
+- **OpenAI Codex CLI** — binary `codex` trong PATH
+- **Google Antigravity** — app tại `/Applications/Antigravity.app` (macOS) HOẶC CLI tool `agy` trong PATH (cài qua menu trong Antigravity IDE)
+
+Antigravity là IDE (như VS Code), không phải CLI. Với user mới chưa cài Antigravity skill nào, folder `~/.gemini/antigravity/skills/` không tồn tại — installer sẽ tự tạo.
 
 Installer symlink folder skill phù hợp vào vị trí của từng platform. Để cập nhật về sau:
 
